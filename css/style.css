@@ -1,0 +1,55 @@
+*{margin: 0;padding: 0}
+*{box-sizing: border-box;}
+.token.selector{
+    color: black;
+}
+.token.property{
+    color: black;
+}
+
+#code-wrapper{
+  padding: 16px;
+  height: 100vh;
+  display: flex;
+}
+
+#code{
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+#paper{
+  background: white; padding: 16px;
+  position: fixed; width: 50%; height: 100vh; right: 0;
+  display: flex; align-items: flex-start;
+}
+
+#paper>.mycontext{
+    height:100%;
+    width: 100%;
+    background:white;
+    padding: 16px;
+    overflow: hidden;
+    display: none;
+    border:1px solid #aaa;
+}
+
+#paper>.html{
+    background: white;
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    overflow: auto;
+    border:1px solid #aaa;
+    border-radius: 10px;
+    animation:breath 0.5s infinite alternate-reverse;
+}
+@keyframes breath{
+  0%{
+    box-shadow: 0 0 10px rgba(0,0,0,1)
+  }
+  100%{
+    box-shadow: 0 0 10px rgba(0,0,0,0.2)
+  }
+}
